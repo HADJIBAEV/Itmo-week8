@@ -45,7 +45,7 @@ export default (express, bodyParser, fs, crypto, http, mongodb, path, cors, pupp
             // res.setHeader('content-type', 'text/plain');
             // res.send("0.8862481722945399");
         })
-        .get('/wordpress/wp-json/wp/v2/posts/1', (req, res) => res.status(200).json({title: {id: 1, rendered: "iusupova_anastasiia"}}))
+        .get('/wordpress/wp-json/wp/v2/posts/1', (req, res) => res.status(200).json({title: {id: 1, rendered: "kahramon"}}))
         .post('/render/', (req, res) => {
             const {random2, random3} = req.body;
 
@@ -82,7 +82,7 @@ export default (express, bodyParser, fs, crypto, http, mongodb, path, cors, pupp
             res.status(200).end();
         
         })
-        .get('/login/', (req, res) => res.send('iusupova_anastasiia'))
+        .get('/login/', (req, res) => res.send('kahramon'))
         .get('/code/', (req, res) => fs.createReadStream(import.meta.url.substring(7)).pipe(res))
         .get('/sha1/:input/', (req, res) => {
             const { input } = req.params;
@@ -135,7 +135,7 @@ export default (express, bodyParser, fs, crypto, http, mongodb, path, cors, pupp
             });
         })
         .all('*', (req, res) => {
-            res.send('iusupova_anastasiia');
+            res.send('kahramon');
         });
 
 
